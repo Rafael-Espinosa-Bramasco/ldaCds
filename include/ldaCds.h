@@ -12,6 +12,7 @@ typedef enum
     ldaCds_StatusNodeParameterIsNUll,
     ldaCds_StatusStructureIsAlreadyEmpty,
     ldaCds_StatusStructureCantBeCleared,
+    ldaCds_StatusIndexOutOfRange,
 }ldaCds_StatusCode;
 
 #endif /* LDACDS_H */

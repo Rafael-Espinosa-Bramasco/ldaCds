@@ -122,7 +122,7 @@ bool ldaCds_StackClear(ldaCds_Stack *_stack, LDACDS_CBF(S,Stack,s), LDACDS_CBF(S
 }
 bool ldaCds_StackDelete(ldaCds_Stack *_stack, LDACDS_CBF(S,Stack,s), LDACDS_CBF(SN,StackNode,sn))
 {
-    if(_stack == NULL) return NULL;
+    if(_stack == NULL) return false;
     if(!ldaCds_StackClear(_stack,NULL,_callbackSN))
     {
         _stack->stackstatus = ldaCds_StatusStructureCantBeCleared;

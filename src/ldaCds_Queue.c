@@ -140,7 +140,7 @@ bool ldaCds_QueueClear(ldaCds_Queue *_queue, LDACDS_CBF(Q,Queue,q), LDACDS_CBF(Q
 }
 bool ldaCds_QueueDelete(ldaCds_Queue *_queue, LDACDS_CBF(Q,Queue,q), LDACDS_CBF(QN,QueueNode,qn))
 {
-    if(_queue == NULL) return NULL;
+    if(_queue == NULL) return false;
     if(!ldaCds_QueueClear(_queue,NULL,_callbackQN))
     {
         _queue->queuestatus = ldaCds_StatusStructureCantBeCleared;
