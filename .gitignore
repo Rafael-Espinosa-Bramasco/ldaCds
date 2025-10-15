@@ -5,6 +5,7 @@
 
 # Folders
 build/*
+.vscode/
 
 # Others
 !build/readme
