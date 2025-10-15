@@ -51,11 +51,11 @@ ldaCds_StackNode *ldaCds_StackPush(ldaCds_Stack *_stack, ldaCds_StackNode *_stac
     _stack->stacktop = _stacknode;
     if(_callbackSN != NULL)
     {
-        callbackSN(_stacknode);
+        _callbackSN(_stacknode);
     }
     if(_callbackS != NULL)
     {
-        callbackS(_stack);
+        _callbackS(_stack);
     }
     _stack->stackstatus = ldaCds_StatusNoErrorDetected;
     return _stacknode;
@@ -75,11 +75,11 @@ ldaCds_StackNode *ldaCds_StackPop(ldaCds_Stack *_stack, LDACDS_CBF(S,Stack,s), L
     }
     if(_callbackSN != NULL)
     {
-        callbackSN(node);
+        _callbackSN(node);
     }
     if(_callbackS != NULL)
     {
-        callbackS(_stack);
+        _callbackS(_stack);
     }
     _stack->stackstatus = ldaCds_StatusNoErrorDetected;
     return node;
@@ -99,11 +99,11 @@ bool ldaCds_StackPopDelete(ldaCds_Stack *_stack, LDACDS_CBF(S,Stack,s), LDACDS_C
     }
     if(_callbackSN != NULL)
     {
-        callbackSN(node);
+        _callbackSN(node);
     }
     if(_callbackS != NULL)
     {
-        callbackS(_stack);
+        _callbackS(_stack);
     }
     free(node);
     _stack->stackstatus = ldaCds_StatusNoErrorDetected;

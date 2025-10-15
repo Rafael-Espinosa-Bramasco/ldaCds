@@ -10,7 +10,7 @@ ldaCds_Queue *ldaCds_CreateQueue(void *_queuestate)
     newqueue->queuestatus = ldaCds_StatusNoErrorDetected;
     return newqueue;
 }
-ldaCds_Queue *ldaCds_CreateQueueNode(void *_nodedata, void *_nodestate)
+ldaCds_QueueNode *ldaCds_CreateQueueNode(void *_nodedata, void *_nodestate)
 {
     ldaCds_QueueNode *newnode = malloc(sizeof(ldaCds_QueueNode));
     if(newnode == NULL) return NULL;
@@ -133,7 +133,7 @@ bool ldaCds_QueueClear(ldaCds_Queue *_queue, LDACDS_CBF(Q,Queue,q), LDACDS_CBF(Q
     while(ldaCds_QueueDequeueDelete(_queue,NULL,_callbackQN));
     if(_callbackQ != NULL)
     {
-        _callbackS(_queue);
+        _callbackQ(_queue);
     }
     _queue->queuestatus = ldaCds_StatusNoErrorDetected;
     return true;

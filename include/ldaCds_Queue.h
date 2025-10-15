@@ -22,7 +22,7 @@ typedef struct
 }ldaCds_Queue;
 
 ldaCds_Queue *ldaCds_CreateQueue(void *_queuestate);
-ldaCds_Queue *ldaCds_CreateQueueNode(void *_nodedata, void *_nodestate);
+ldaCds_QueueNode *ldaCds_CreateQueueNode(void *_nodedata, void *_nodestate);
 bool ldaCds_QueueHasState(ldaCds_Queue *_queue);
 bool ldaCds_QueueNodeHasState(ldaCds_QueueNode *_queuenode);
 bool ldaCds_QueueIsEmpty(ldaCds_Queue *_queue);
