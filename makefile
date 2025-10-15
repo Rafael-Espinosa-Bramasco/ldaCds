@@ -6,7 +6,8 @@ ldaCds:
 	mv *.o build/
 	ar rcs build/libldaCds.a $(wildcard build/*.o)
 	cp licence build/licence
+	cp include/*.h build/
 
 .PHONY: c
 c:
-	rm build/*.o build/*.a build/licence
+	rm build/*.o build/*.a build/licence build/*.h
