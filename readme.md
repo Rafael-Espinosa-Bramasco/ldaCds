@@ -79,7 +79,7 @@ LDACDS_CBF is a preprocessor macro to create function pointers to use them as pa
 
     void (*_callbackTN)(ldaCds_TreeNode *_tn)
 
-The type ldaCds_StatusCode is a typedef enum used to defined the types of error codes for all the DS's. ldaCds_StatusNoeErrorDetected is the default error code for all the new DS's.
+The type ldaCds_StatusCode is a typedef enum used to defined the types of error codes for all the DS's. ldaCds_StatusNoErrorDetected is the default error code for all the new DS's.
 
 You don't need (in theory) to include this header file because all the structures header files (for example ldaCds_Stack.h) already include it.
 
